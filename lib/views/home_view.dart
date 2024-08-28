@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:note_app/constants.dart';
 import 'package:note_app/widget/add_note_bottom_sheet.dart';
 import 'package:note_app/widget/home_view_body.dart';
 
@@ -10,7 +11,7 @@ class HomeView extends StatelessWidget {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
           shape: const CircleBorder(),
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: kPrimaryColor,
           onPressed: () {
             showModalBottomSheet(
                 context: context,
