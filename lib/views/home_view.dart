@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:note_app/constants.dart';
-import 'package:note_app/widget/add_note_bottom_sheet.dart';
-import 'package:note_app/widget/home_view_body.dart';
+import 'package:note_app/views/widget/add_note_bottom_sheet.dart';
+import 'package:note_app/views/widget/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
