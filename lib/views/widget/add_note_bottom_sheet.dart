@@ -4,6 +4,7 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:note_app/constants.dart';
 import 'package:note_app/cubits/add_note_cubit/cubit/add_note_cubit.dart';
+import 'package:note_app/cubits/note_cubit/notes_cubit.dart';
 import 'package:note_app/views/widget/add_form_note.dart';
 
 class AddNoteBottomSheet extends StatelessWidget {
@@ -16,6 +17,7 @@ class AddNoteBottomSheet extends StatelessWidget {
       child: BlocConsumer<AddNoteCubit, AddNoteState>(
         listener: (context, state) {
           if (state is AddNoteSuccess) {
+            BlocProvider.of<NotesCubit>(context).fetchAllNotes();
             Navigator.pop(context);
           }
 
